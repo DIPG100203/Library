@@ -40,9 +40,9 @@ class libroController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'requiered',
+            'titulo' => 'required',
             'descripcion' => 'nullable',
-            'autor_id' => 'requiered|exists:autors,id',
+            'autor_id' => 'required|exists:autors,id',
             'imagen' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
